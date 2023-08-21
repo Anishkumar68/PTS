@@ -1,4 +1,6 @@
 @import "/style/animations.css";
+@import "/style/card.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -130,21 +132,7 @@ body {
   background-color: var(--color-primary-1);
 }
 
-/* .btn{
-    background-color: transparent;
-    color: var(--bs-dark);
-    font-size: 1rem;
-    font-family: inherit;
-    font-weight: 500;
-    border: 2px solid var(--bs-gray-dark);
-    border-bottom:4px solid var(--bs-gray-dark);
-    padding: 4px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s;
-  } */
-
-button {
+.btn {
   position: relative;
   /*display:block; */
   height: 45px;
@@ -170,15 +158,16 @@ button {
   -webkit-transition: 0.08s ease-in;
 }
 
-.btn:hover {
+/* btn-login */
+.btn--login:hover {
   color: var(--bs-gray-100);
 }
-.btn--text:hover {
-  background-color: inherit;
-  color: var(--bs-gray-dark);
+
+.btn--login:hover:before {
+  top: 0;
 }
 
-.btn:before {
+.btn--login:before {
   content: "";
   position: absolute;
   background: var(--bs-gray-dark);
@@ -191,6 +180,7 @@ button {
   -webkit-transition: top 0.09s ease-in;
 }
 
+/* btn-text */
 .btn--text:before {
   content: "";
   position: absolute;
@@ -204,9 +194,11 @@ button {
   -webkit-transition: top 0.09s ease-in;
 }
 
-.btn:hover:before {
-  top: 0;
+.btn--text:hover {
+  background-color: inherit;
+  color: var(--bs-gray-dark);
 }
+
 .btn--text:hover:before {
   top: 100%;
 }
@@ -398,6 +390,47 @@ h4 {
   color: #fff;
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+/* Genreal Elements */
+.section {
+  padding: 8rem 3rem;
+  border-top: 0.6px solid var(--bs-gray-600);
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.sec__title {
+  max-width: 80rem;
+  margin: 0 auto 4rem auto;
+  display: flex;
+  flex-flow: column;
+  place-items: center;
+}
+
+.sec__description {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--bs-dark);
+}
+
+.section__header {
+  font-size: 1rem;
+  color: var(--bs-gray-600);
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.all-products {
+  background-color: var(--bs-gray-100);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%230FF'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23F00'/%3E%3Cstop offset='1' stop-color='%23FC0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='4.29'%3E%3Cpath transform='translate(-47.6 6.3999999999999995) rotate(2.8 1409 581) scale(0.999424)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='1.4300000000000002' transform='translate(-44 32) rotate(5.6 800 450) scale(1.007952)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(16 -60) rotate(52 401 736) scale(1.007952)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='1.3'%3E%3Cpath transform='translate(192 -4.8) rotate(1.2 150 345) scale(0.983808)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='2.8600000000000003' transform='translate(-84 -84) rotate(57.60000000000001 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='translate(-147.2 44.8) rotate(9.600000000000001 1400 132) scale(0.96)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .overlay {
