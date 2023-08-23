@@ -1,0 +1,52 @@
+.pts-container {
+  width: 100%;
+  max-width: 134rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2.4rem;
+  padding-left: 2.4rem;
+}
+
+.partners-bannner-module--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f7f9fa;
+  container-type: inline-size;
+}
+
+.partners-bannner-module--content {
+  padding: 6.4rem;
+  width: 100%;
+}
+
+.partners-banners-module--heading {
+  color: #6a6f73;
+  font-weight: 400;
+  margin-bottom: 2.4rem;
+  font-size: 1.9rem;
+  max-width: 100%;
+}
+
+.partners-banners-module--logo {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-self: normal;
+}
+
+.pts-list {
+  padding: 0;
+}
+
+.partners-logos--item {
+  justify-content: center;
+}
+
+.partners-logos--item img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
